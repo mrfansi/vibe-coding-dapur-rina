@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>12 Menu Favorit Orang Indonesia — Dapur Rina</title>
+<meta name="description" content="Daftar 12 masakan yang paling digemari orang Indonesia, lengkap dengan asal daerah dan tingkat kesulitannya. Mana yang biasa dimasak sendiri, mana yang biasa dibeli.">
+<meta name="theme-color" content="#C1502E">
+<meta property="og:type" content="article">
+<meta property="og:title" content="12 Menu Favorit Orang Indonesia">
+<meta property="og:description" content="Dari rendang sampai martabak manis — daftar masakan yang paling sering dirindukan orang Indonesia.">
+<meta property="og:image" content="assets/fav-rendang.jpg">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍳</text></svg>">
+
+<!--
+  ================================================================
+  Halaman daftar menu favorit. Gaya dan interaksinya menumpang
+  style.css + app.js yang sama dengan index.html.
+
+  Urutan 1-12 di halaman ini adalah PILIHAN REDAKSI, bukan hasil
+  survei. Jangan menambahkan angka persentase atau klaim peringkat
+  resmi kecuali ada sumber sungguhan yang bisa ditautkan.
+  ================================================================
+-->
+
+<script>
+  if ('IntersectionObserver' in window) document.documentElement.classList.add('js');
+</script>
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="index.html">
+      <span class="brand-mark" aria-hidden="true">🍳</span>
+      Dapur Rina
+    </a>
+    <nav class="nav" aria-label="Navigasi utama">
+      <a href="index.html">Beranda</a>
+      <a href="index.html#kelas">Menu Kelas</a>
+      <a href="index.html#faq">FAQ</a>
+    </nav>
+    <a class="btn btn-primary btn-sm header-cta" href="https://wa.me/6281234567890?text=Halo%20Bu%20Rina%2C%20saya%20mau%20daftar%20kelas%20masak%20online%20Dapur%20Rina.">
+      Daftar Kelas
+    </a>
+  </div>
+</header>
+
+<main>
+
+  <!-- ============ JUDUL HALAMAN ============ -->
+  <section class="laman-hero">
+    <div class="wrap">
+      <p class="remah"><a href="index.html">Beranda</a> <span aria-hidden="true">›</span> Menu Favorit</p>
+
+      <span class="eyebrow">Referensi menu</span>
+      <h1>12 masakan yang paling digemari orang Indonesia</h1>
+      <p>
+        Dari yang dimasak ibu tiap minggu sampai yang cuma dibeli waktu lewat gerobaknya.
+        Tiap menu ditulis lengkap dengan asal daerah, tingkat kesulitan, dan apakah masuk akal
+        dimasak sendiri di rumah.
+      </p>
+
+      <p class="catatan">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 7.6v.4"/></svg>
+        <span>Urutan 1–12 di halaman ini adalah pilihan redaksi Dapur Rina berdasarkan menu yang paling sering ditanyakan murid — bukan hasil survei, jadi jangan dibaca sebagai peringkat resmi.</span>
+      </p>
+    </div>
+  </section>
+
+  <!-- ============ DAFTAR 12 MENU ============ -->
+  <section class="section" id="daftar">
+    <div class="wrap">
+      <div class="grid-3">
+
+        <article class="fav-card reveal">
+          <div class="fav-thumb">
+            <img src="assets/fav-nasi-goreng.jpg" width="600" height="450" alt="Sepiring nasi goreng dengan telur dan kerupuk">
+            <span class="fav-num">1</span>
+          </div>
+          <div class="fav-body">
+            <span class="fav-asal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 21s7-5.7 7-11a7 7 0 1 0-14 0c0 5.3 7 11 7 11Z"/><circle cx="12" cy="10" r="2.4"/></svg> Seluruh Indonesia</span>
+            <h3>Nasi Goreng</h3>
+            <p>Penyelamat nasi sisa semalam. Hampir tiap rumah punya versinya sendiri, dan tidak ada dua yang benar-benar sama.</p>
+            <a class="fav-kelas" href="index.html#kelas">Diajarkan di Kelas Masakan Rumahan →</a>
+          </div>
+        </article>
+
+        <article class="fav-card reveal">
+          <div class="fav-thumb">
+            <img src="assets/fav-rendang.jpg" width="600" height="450" loading="lazy" alt="Sepiring rendang daging berwarna cokelat gelap">
+            <span class="fav-num">2</span>
+          </div>
+          <div class="fav-body">
+            <span class="fav-asal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 21s7-5.7 7-11a7 7 0 1 0-14 0c0 5.3 7 11 7 11Z"/><circle cx="12" cy="10" r="2.4"/></svg> Sumatera Barat</span>
+            <h3>Rendang</h3>
+            <p>Diaduk berjam-jam sampai santannya menyusut dan menghitam. Bukan masakan buru-buru — ini masakan yang menguji kesabaran.</p>
+          </div>
+        </article>
+
+        <article class="fav-card reveal">
+          <div class="fav-thumb">
+            <img src="assets/fav-sate-ayam.jpg" width="600" height="450" loading="lazy" alt="Sate ayam dengan bumbu kacang di atas piring">
+            <span class="fav-num">3</span>
+          </div>
+          <div class="fav-body">
+            <span class="fav-asal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 21s7-5.7 7-11a7 7 0 1 0-14 0c0 5.3 7 11 7 11Z"/><circle cx="12" cy="10" r="2.4"/></svg> Madura, Jawa Timur</span>
+            <h3>Sate Ayam</h3>
+            <p>Yang bikin repot bukan menusuknya, tapi menjaga bara tetap stabil. Bumbu kacangnya sendiri jauh lebih gampang dari dugaan orang.</p>
+          </div>
+        </article>
+
+        <article class="fav-card reveal">
+          <div class="fav-thumb">
+            <img src="assets/fav-bakso.jpg" width="600" height="450" loading="lazy" alt="Semangkuk bakso dengan kuah bening dan tahu">
+            <span class="fav-num">4</span>
+          </div>
+          <div class="fav-body">
+            <span class="fav-asal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 21s7-5.7 7-11a7 7 0 1 0-14 0c0 5.3 7 11 7 11Z"/><circle cx="12" cy="10" r="2.4"/></svg> Solo &amp; Malang, Jawa</span>
+            <h3>Bakso</h3>
+            <p>Menu hujan-hujan yang tidak pernah salah. Kuncinya di kaldu yang direbus lama, bukan di bumbu yang banyak.</p>
+          </div>
+        </article>
+
+        <article class="fav-card reveal">
+          <div class="fav-thumb">
+            <img src="assets/fav-soto-ayam.jpg" width="600" height="450" loading="lazy" alt="Semangkuk soto ayam kuah kuning dengan sambal">
+            <span class="fav-num">5</span>
+          </div>
+          <div class="fav-body">
+            <span class="fav-asal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 21s7-5.7 7-11a7 7 0 1 0-14 0c0 5.3 7 11 7 11Z"/><circle cx="12" cy="10" r="2.4"/></svg> Lamongan, Jawa Timur</span>
+            <h3>Soto Ayam</h3>
+            <p>Tiap daerah mengaku punya versi paling benar. Yang jelas, kuah kuningnya jadi obat waktu badan kurang enak.</p>
+            <a class="fav-kelas" href="index.html#kelas">Diajarkan di Kelas Masakan Rumahan →</a>
+          </div>
+        </article>
+
+        <article class="fav-card reveal">
+          <div class="fav-thumb">
+            <img src="assets/fav-gado-gado.jpg" width="600" height="450" loading="lazy" alt="Gado-gado dengan telur rebus dan saus kacang">
+            <span class="fav-num">6</span>
+          </div>
+          <div class="fav-body">
+            <span class="fav-asal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 21s7-5.7 7-11a7 7 0 1 0-14 0c0 5.3 7 11 7 11Z"/><circle cx="12" cy="10" r="2.4"/></svg> Betawi, Jakarta</span>
+            <h3>Gado-gado</h3>
+            <p>Salad versi Indonesia: sayur rebus disiram saus kacang. Menu paling ramah buat yang lagi mengurangi gorengan.</p>
+          </div>
+        </article>
+
+        <article class="fav-card reveal">
+          <div class="fav-thumb">
+            <img src="assets/fav-mie-ayam.jpg" width="600" height="450" loading="lazy" alt="Semangkuk mie ayam dengan sawi hijau">
+            <span class="fav-num">7</span>
+          </div>
+          <div class="fav-body">
+            <span class="fav-asal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 21s7-5.7 7-11a7 7 0 1 0-14 0c0 5.3 7 11 7 11Z"/><circle cx="12" cy="10" r="2.4"/></svg> Jawa Tengah</span>
+            <h3>Mie Ayam</h3>
+            <p>Makan siang sejuta umat. Rahasianya ada di minyak ayam dan kecap yang diaduk duluan di dasar mangkuk.</p>
+          </div>
+        </article>
+
+        <article class="fav-card reveal">
+          <div class="fav-thumb">
+            <img src="assets/fav-ayam-goreng.jpg" width="600" height="450" loading="lazy" alt="Ayam goreng kremes dengan sambal dan lalapan">
+            <span class="fav-num">8</span>
+          </div>
+          <div class="fav-body">
+            <span class="fav-asal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 21s7-5.7 7-11a7 7 0 1 0-14 0c0 5.3 7 11 7 11Z"/><circle cx="12" cy="10" r="2.4"/></svg> Yogyakarta &amp; Klaten</span>
+            <h3>Ayam Goreng Kremes</h3>
+            <p>Ayamnya diungkep dulu sampai bumbu masuk, kremesnya dari sisa air ungkepan. Tidak ada yang terbuang.</p>
+            <a class="fav-kelas" href="index.html#kelas">Diajarkan di Kelas Lauk &amp; Sambal →</a>
+          </div>
+        </article>
+
+        <article class="fav-card reveal">
+          <div class="fav-thumb">
+            <img src="assets/fav-rawon.jpg" width="600" height="450" loading="lazy" alt="Semangkuk rawon berkuah hitam dengan nasi putih">
+            <span class="fav-num">9</span>
+          </div>
+          <div class="fav-body">
+            <span class="fav-asal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 21s7-5.7 7-11a7 7 0 1 0-14 0c0 5.3 7 11 7 11Z"/><circle cx="12" cy="10" r="2.4"/></svg> Surabaya, Jawa Timur</span>
+            <h3>Rawon</h3>
+            <p>Kuahnya hitam karena kluwek, bukan karena gosong. Satu-satunya sup di daftar ini yang warnanya bikin orang asing ragu.</p>
+          </div>
+        </article>
+
+        <article class="fav-card reveal">
+          <div class="fav-thumb">
+            <img src="assets/fav-pempek.jpg" width="600" height="450" loading="lazy" alt="Sepiring pempek Palembang">
+            <span class="fav-num">10</span>
+          </div>
+          <div class="fav-body">
+            <span class="fav-asal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 21s7-5.7 7-11a7 7 0 1 0-14 0c0 5.3 7 11 7 11Z"/><circle cx="12" cy="10" r="2.4"/></svg> Palembang, Sumatera Selatan</span>
+            <h3>Pempek</h3>
+            <p>Adonan ikan dan sagu yang dimakan dengan cuko asam pedas. Cukonya justru yang paling menentukan enak atau tidaknya.</p>
+          </div>
+        </article>
+
+        <article class="fav-card reveal">
+          <div class="fav-thumb">
+            <img src="assets/fav-gudeg.jpg" width="600" height="450" loading="lazy" alt="Gudeg dengan ayam dan sambal krecek di atas daun pisang">
+            <span class="fav-num">11</span>
+          </div>
+          <div class="fav-body">
+            <span class="fav-asal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 21s7-5.7 7-11a7 7 0 1 0-14 0c0 5.3 7 11 7 11Z"/><circle cx="12" cy="10" r="2.4"/></svg> Yogyakarta</span>
+            <h3>Gudeg</h3>
+            <p>Nangka muda dimasak semalaman sampai manis dan cokelat pekat. Masakan paling sabar di seluruh daftar ini.</p>
+          </div>
+        </article>
+
+        <article class="fav-card reveal">
+          <div class="fav-thumb">
+            <img src="assets/fav-martabak.jpg" width="600" height="450" loading="lazy" alt="Martabak manis dengan topping cokelat dan keju">
+            <span class="fav-num">12</span>
+          </div>
+          <div class="fav-body">
+            <span class="fav-asal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 21s7-5.7 7-11a7 7 0 1 0-14 0c0 5.3 7 11 7 11Z"/><circle cx="12" cy="10" r="2.4"/></svg> Bangka</span>
+            <h3>Martabak Manis</h3>
+            <p>Di sebagian daerah namanya terang bulan. Menu penutup malam minggu yang porsinya tidak pernah masuk akal untuk satu orang.</p>
+            <a class="fav-kelas" href="index.html#kelas">Sepupunya diajarkan di Kelas Kue &amp; Jajan Pasar →</a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ DIMASAK SENDIRI vs DIBELI ============ -->
+  <section class="section keunggulan" id="sering-dimasak">
+    <div class="wrap">
+      <div class="section-head center reveal">
+        <span class="kicker">Yang sering dibuat sendiri</span>
+        <h2>Mana yang masuk akal dimasak di rumah?</h2>
+        <p>Dari 12 menu di atas, tidak semuanya sepadan dibuat sendiri. Ini pembagian jujurnya.</p>
+      </div>
+
+      <div class="banding reveal">
+        <div class="banding-kolom">
+          <h3>Biasa dimasak sendiri</h3>
+          <span>Bahannya gampang, alatnya seadanya, dan sekali bisa langsung jadi menu mingguan.</span>
+          <ul>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m4 12.5 5 5 11-11"/></svg> Nasi goreng — 15 menit, sekali wajan</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m4 12.5 5 5 11-11"/></svg> Ayam goreng — bumbunya diungkep, sisanya tinggal menggoreng</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m4 12.5 5 5 11-11"/></svg> Soto ayam — satu panci untuk sekeluarga</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m4 12.5 5 5 11-11"/></svg> Gado-gado — tanpa digoreng, cocok buat harian</li>
+          </ul>
+        </div>
+
+        <div class="banding-kolom">
+          <h3>Biasanya lebih enak beli</h3>
+          <span>Bukan karena sulit, tapi karena butuh alat khusus, bara, atau waktu semalaman.</span>
+          <ul>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg> Sate — perlu bara, bukan kompor</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg> Bakso — kaldunya minta direbus berjam-jam</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg> Gudeg — dimasak semalaman</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg> Martabak manis — butuh loyang tebal khusus</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CTA PENUTUP ============ -->
+  <section class="cta">
+    <div class="wrap">
+      <div class="cta-panel reveal">
+        <h2>Empat dari daftar ini diajarkan di kelas</h2>
+        <p>Nasi goreng, soto ayam, ayam goreng kremes, dan sambal-sambalnya. Dimulai dari nol, jadi tidak perlu punya pengalaman apa pun dulu.</p>
+        <a class="btn btn-light" href="https://wa.me/6281234567890?text=Halo%20Bu%20Rina%2C%20saya%20lihat%20halaman%20menu%20favorit%20dan%20mau%20daftar%20kelas.">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2.01a9.9 9.9 0 0 0-8.5 14.9L2.05 22.4l5.62-1.47a9.9 9.9 0 1 0 4.37-18.92Zm0 1.8a8.1 8.1 0 1 1-4.1 15.09l-.3-.18-3.1.81.83-3.02-.2-.31A8.1 8.1 0 0 1 12.04 3.8Zm4.6 10.4c-.25-.13-1.47-.72-1.7-.8-.23-.09-.4-.13-.56.12-.17.25-.65.8-.8.97-.14.16-.29.19-.54.06-.25-.12-1.05-.38-2-1.24a7.5 7.5 0 0 1-1.38-1.72c-.15-.25-.02-.38.11-.5.11-.12.25-.3.37-.44.12-.15.16-.25.25-.42.08-.16.04-.31-.02-.44-.06-.12-.56-1.35-.77-1.85-.2-.48-.4-.41-.56-.42h-.47c-.17 0-.44.06-.66.31-.23.25-.87.85-.87 2.07s.89 2.4 1.02 2.57c.12.16 1.75 2.67 4.24 3.74.59.26 1.05.41 1.41.52.6.19 1.14.16 1.57.1.48-.07 1.47-.6 1.68-1.18.2-.58.2-1.08.14-1.18-.06-.1-.23-.16-.48-.28Z"/></svg>
+          Daftar Kelas
+        </a>
+        <p class="cta-sub">Atau <a href="index.html#kelas" style="color:#fff;text-decoration:underline">lihat dulu isi tiap kelasnya</a>.</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <div>
+        <div class="brand"><span class="brand-mark" aria-hidden="true">🍳</span> Dapur Rina</div>
+        <p>Kelas masak online untuk pemula sejak 2019. Diajar langsung oleh Rina Marlina, ibu dua anak yang dulu juga tidak bisa masak apa-apa.</p>
+      </div>
+      <div>
+        <div class="footer-links">
+          <a href="index.html">Beranda</a>
+          <a href="index.html#kelas">Menu Kelas</a>
+          <a href="index.html#testimoni">Cerita Murid</a>
+          <a href="index.html#faq">FAQ</a>
+          <a href="https://wa.me/6281234567890?text=Halo%20Bu%20Rina%2C%20saya%20mau%20tanya%20soal%20kelas%20masak.">WhatsApp</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Dapur Rina. Dibuat pelan-pelan dari dapur rumah di Bandung.</p>
+      <p class="kredit">
+        Kredit foto halaman ini (Wikimedia Commons):
+        <a href="https://commons.wikimedia.org/wiki/File:Nasi_Goreng_Kampung.jpg">Supardisahabu</a> (CC BY-SA 4.0),
+        <a href="https://commons.wikimedia.org/wiki/File:Beef_Rendang..JPG">Beef Rendang</a> (CC0),
+        <a href="https://commons.wikimedia.org/wiki/File:Sate_ayam_sama_bumbu_kacang.jpg">Bapak Alex</a> (CC BY 4.0),
+        <a href="https://commons.wikimedia.org/wiki/File:Bakso_khas_Solo.jpg">Wiwik P</a> (CC BY-SA 4.0),
+        <a href="https://commons.wikimedia.org/wiki/File:Soto_ayam_lamongan.jpg">Shinta amalia</a> (CC BY-SA 4.0),
+        <a href="https://commons.wikimedia.org/wiki/File:Gado-Gado.jpg">Supardisahabu</a> (CC BY-SA 4.0),
+        <a href="https://commons.wikimedia.org/wiki/File:Mi_Ayam_(2).jpg">Ians Takezo</a> (CC BY 2.0),
+        <a href="https://commons.wikimedia.org/wiki/File:Ayam_Goreng_Kremes.jpg">Happywu</a> (CC0),
+        <a href="https://commons.wikimedia.org/wiki/File:Rawon_Setan.jpg">christian r</a> (CC BY-SA 2.0),
+        <a href="https://commons.wikimedia.org/wiki/File:Pempek_campur.JPG">Midori</a> (CC BY-SA 3.0),
+        <a href="https://commons.wikimedia.org/wiki/File:Gudeg_Ayam.jpg">Indonesiagood</a> (CC BY 4.0),
+        <a href="https://commons.wikimedia.org/wiki/File:Martabak_manis_complit.jpg">frank wouters</a> (CC BY 2.0).
+      </p>
+    </div>
+  </div>
+</footer>
+
+<!-- Bar CTA melayang, hanya tampil di layar kecil -->
+<div class="bar">
+  <a class="btn btn-primary btn-block" href="https://wa.me/6281234567890?text=Halo%20Bu%20Rina%2C%20saya%20lihat%20halaman%20menu%20favorit%20dan%20mau%20daftar%20kelas.">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2.01a9.9 9.9 0 0 0-8.5 14.9L2.05 22.4l5.62-1.47a9.9 9.9 0 1 0 4.37-18.92Zm0 1.8a8.1 8.1 0 1 1-4.1 15.09l-.3-.18-3.1.81.83-3.02-.2-.31A8.1 8.1 0 0 1 12.04 3.8Zm4.6 10.4c-.25-.13-1.47-.72-1.7-.8-.23-.09-.4-.13-.56.12-.17.25-.65.8-.8.97-.14.16-.29.19-.54.06-.25-.12-1.05-.38-2-1.24a7.5 7.5 0 0 1-1.38-1.72c-.15-.25-.02-.38.11-.5.11-.12.25-.3.37-.44.12-.15.16-.25.25-.42.08-.16.04-.31-.02-.44-.06-.12-.56-1.35-.77-1.85-.2-.48-.4-.41-.56-.42h-.47c-.17 0-.44.06-.66.31-.23.25-.87.85-.87 2.07s.89 2.4 1.02 2.57c.12.16 1.75 2.67 4.24 3.74.59.26 1.05.41 1.41.52.6.19 1.14.16 1.57.1.48-.07 1.47-.6 1.68-1.18.2-.58.2-1.08.14-1.18-.06-.1-.23-.16-.48-.28Z"/></svg>
+    Daftar Kelas — Sisa 6 Kursi
+  </a>
+</div>
+
+<script src="app.js" defer></script>
+
+</body>
+</html>
