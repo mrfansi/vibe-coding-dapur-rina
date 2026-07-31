@@ -227,6 +227,62 @@
   .who b{display:block;font-size:16px;font-weight:600}
   .who span{font-size:14.5px;color:var(--muted)}
 
+  /* ---------- Galeri video ---------- */
+  .galeri{background:linear-gradient(180deg,#FBEDE2 0%,var(--cream) 100%)}
+  .video-card{
+    display:flex;flex-direction:column;overflow:hidden;text-decoration:none;
+    background:var(--white);border:1px solid rgba(193,80,46,.13);
+    border-radius:var(--radius);
+    transition:transform .2s ease,box-shadow .2s ease
+  }
+  .video-card:hover{transform:translateY(-5px);box-shadow:var(--shadow-lg)}
+  .video-thumb{position:relative;aspect-ratio:16/9;background:var(--sand)}
+  .video-thumb img{width:100%;height:100%;object-fit:cover}
+  .video-thumb::after{
+    content:"";position:absolute;inset:0;
+    background:linear-gradient(180deg,rgba(59,42,34,0) 48%,rgba(59,42,34,.5))
+  }
+  .play{
+    position:absolute;left:50%;top:50%;translate:-50% -50%;z-index:1;
+    width:60px;height:60px;border-radius:50%;
+    background:rgba(255,253,251,.94);color:var(--terracotta);
+    display:grid;place-items:center;box-shadow:var(--shadow-md);
+    transition:transform .2s ease,background-color .2s ease
+  }
+  .play svg{width:24px;height:24px;margin-left:3px}
+  .video-card:hover .play{transform:scale(1.09);background:#fff}
+  .durasi{
+    position:absolute;right:12px;bottom:12px;z-index:1;
+    background:rgba(46,33,27,.85);color:#fff;
+    font-size:13px;font-weight:600;padding:4px 9px;border-radius:7px;
+    font-variant-numeric:tabular-nums
+  }
+  .video-body{display:flex;flex-direction:column;gap:9px;flex:1;padding:22px 22px 24px}
+  .video-tag{font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--clay)}
+  .video-card h3{font-size:19px;line-height:1.36;color:var(--ink)}
+  .video-src{margin-top:auto;padding-top:6px;font-size:14.5px;color:var(--muted);display:flex;align-items:center;gap:8px}
+  .video-src svg{width:18px;height:18px;color:var(--terracotta);flex:none}
+
+  /* ---------- FAQ ---------- */
+  .faq{max-width:780px;margin-inline:auto;display:grid;gap:12px}
+  .faq details{
+    background:var(--white);border:1px solid rgba(193,80,46,.15);
+    border-radius:16px;transition:border-color .2s ease,box-shadow .2s ease
+  }
+  .faq details[open]{border-color:rgba(193,80,46,.34);box-shadow:var(--shadow-sm)}
+  .faq summary{
+    display:flex;align-items:center;justify-content:space-between;gap:18px;
+    padding:20px 22px;cursor:pointer;list-style:none;
+    font-family:Georgia,"Times New Roman",serif;font-size:18.5px;font-weight:700;line-height:1.4
+  }
+  .faq summary::-webkit-details-marker{display:none}
+  .faq summary:hover{color:var(--terracotta)}
+  .faq .chev{width:22px;height:22px;flex:none;color:var(--terracotta);transition:transform .2s ease}
+  .faq details[open] .chev{transform:rotate(180deg)}
+  .faq details p{padding:0 22px 22px;color:var(--muted);font-size:16.5px}
+  .faq-note{text-align:center;color:var(--muted);font-size:16px;margin-top:28px}
+  .faq-note a{color:var(--terracotta);font-weight:600}
+
   /* ---------- CTA penutup ---------- */
   .cta{padding:70px 0 78px}
   .cta-panel{
@@ -302,9 +358,10 @@
       Dapur Rina
     </a>
     <nav class="nav" aria-label="Navigasi utama">
-      <a href="#keunggulan">Kenapa di sini</a>
+      <a href="#video">Video</a>
       <a href="#kelas">Menu Kelas</a>
       <a href="#testimoni">Cerita Murid</a>
+      <a href="#faq">FAQ</a>
     </nav>
     <a class="btn btn-primary btn-sm header-cta" href="https://wa.me/6281234567890?text=Halo%20Bu%20Rina%2C%20saya%20mau%20daftar%20kelas%20masak%20online%20Dapur%20Rina.">
       Daftar Kelas
@@ -406,6 +463,80 @@
           <p>Rekaman kelas bisa diulang kapan saja, dan foto masakanmu dikoreksi langsung oleh Bu Rina di grup WhatsApp murid.</p>
         </article>
       </div>
+    </div>
+  </section>
+
+  <!-- ============ GALERI VIDEO ============ -->
+  <section class="section galeri" id="video">
+    <div class="wrap">
+      <div class="section-head center">
+        <span class="kicker">Galeri video</span>
+        <h2>Cicipi dulu, baru putuskan</h2>
+        <p>Tiga video yang biasa dipakai murid baru untuk latihan sebelum kelas dimulai. Tonton satu, lalu bandingkan dengan menu kelas di bawah.</p>
+      </div>
+
+      <div class="grid-3">
+
+        <a class="video-card" href="https://www.youtube.com/watch?v=Js9FXCkn798" target="_blank" rel="noopener">
+          <div class="video-thumb">
+            <img src="assets/video-nasi-goreng.jpg" width="800" height="450" loading="lazy"
+                 alt="Cuplikan video resep nasi goreng ala restoran">
+            <span class="play" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5.2v13.6L19.5 12 8 5.2Z"/></svg>
+            </span>
+            <span class="durasi">8:40</span>
+          </div>
+          <div class="video-body">
+            <span class="video-tag">Masakan rumahan</span>
+            <h3>Nasi goreng ala restoran, versi praktis di rumah</h3>
+            <span class="video-src">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M21.6 7.2a2.5 2.5 0 0 0-1.75-1.77C18.3 5 12 5 12 5s-6.3 0-7.85.43A2.5 2.5 0 0 0 2.4 7.2 26 26 0 0 0 2 12a26 26 0 0 0 .4 4.8 2.5 2.5 0 0 0 1.75 1.77C5.7 19 12 19 12 19s6.3 0 7.85-.43a2.5 2.5 0 0 0 1.75-1.77A26 26 0 0 0 22 12a26 26 0 0 0-.4-4.8ZM10 15V9l5.2 3L10 15Z"/></svg>
+              Devina Hermawan · buka di YouTube
+            </span>
+          </div>
+        </a>
+
+        <a class="video-card" href="https://www.youtube.com/watch?v=fPXOjA5UlzQ" target="_blank" rel="noopener">
+          <div class="video-thumb">
+            <img src="assets/video-ayam-kremes.jpg" width="800" height="450" loading="lazy"
+                 alt="Cuplikan video resep ayam goreng kremes">
+            <span class="play" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5.2v13.6L19.5 12 8 5.2Z"/></svg>
+            </span>
+            <span class="durasi">11:43</span>
+          </div>
+          <div class="video-body">
+            <span class="video-tag">Lauk &amp; sambal</span>
+            <h3>Ayam goreng kremes: rahasia kremesan renyah tahan lama</h3>
+            <span class="video-src">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M21.6 7.2a2.5 2.5 0 0 0-1.75-1.77C18.3 5 12 5 12 5s-6.3 0-7.85.43A2.5 2.5 0 0 0 2.4 7.2 26 26 0 0 0 2 12a26 26 0 0 0 .4 4.8 2.5 2.5 0 0 0 1.75 1.77C5.7 19 12 19 12 19s6.3 0 7.85-.43a2.5 2.5 0 0 0 1.75-1.77A26 26 0 0 0 22 12a26 26 0 0 0-.4-4.8ZM10 15V9l5.2 3L10 15Z"/></svg>
+              Ceceromed Kitchen · buka di YouTube
+            </span>
+          </div>
+        </a>
+
+        <a class="video-card" href="https://www.youtube.com/watch?v=isZYKGxRz5g" target="_blank" rel="noopener">
+          <div class="video-thumb">
+            <img src="assets/video-kue-lapis.jpg" width="800" height="450" loading="lazy"
+                 alt="Cuplikan video resep lapis legit kukus">
+            <span class="play" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5.2v13.6L19.5 12 8 5.2Z"/></svg>
+            </span>
+            <span class="durasi">9:37</span>
+          </div>
+          <div class="video-body">
+            <span class="video-tag">Kue &amp; jajan pasar</span>
+            <h3>Lapis legit kukus ekonomis, anti gagal untuk pemula</h3>
+            <span class="video-src">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M21.6 7.2a2.5 2.5 0 0 0-1.75-1.77C18.3 5 12 5 12 5s-6.3 0-7.85.43A2.5 2.5 0 0 0 2.4 7.2 26 26 0 0 0 2 12a26 26 0 0 0 .4 4.8 2.5 2.5 0 0 0 1.75 1.77C5.7 19 12 19 12 19s6.3 0 7.85-.43a2.5 2.5 0 0 0 1.75-1.77A26 26 0 0 0 22 12a26 26 0 0 0-.4-4.8ZM10 15V9l5.2 3L10 15Z"/></svg>
+              PAP COOK · buka di YouTube
+            </span>
+          </div>
+        </a>
+
+      </div>
+
+      <p class="kelas-note">Video dibuka di tab baru, jadi halaman ini tetap terbuka. Ketiganya milik kanal masing-masing, dipakai sementara sebagai contoh.</p>
     </div>
   </section>
 
@@ -533,6 +664,71 @@
     </div>
   </section>
 
+  <!-- ============ FAQ ============ -->
+  <section class="section" id="faq">
+    <div class="wrap">
+      <div class="section-head center">
+        <span class="kicker">Pertanyaan yang sering masuk</span>
+        <h2>Masih ragu? Ini yang biasa ditanyakan</h2>
+        <p>Kalau pertanyaanmu belum ada di sini, chat saja — dijawab langsung oleh Bu Rina, bukan robot.</p>
+      </div>
+
+      <div class="faq">
+
+        <details open>
+          <summary>
+            Saya benar-benar tidak bisa masak. Apa masih boleh ikut?
+            <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+          </summary>
+          <p>Justru itu yang paling ditunggu. Sesi pertama isinya hal paling dasar: cara memegang pisau, mengenali besar api, dan urutan memasukkan bumbu. Sekitar tujuh dari sepuluh murid tiap batch belum pernah masak sama sekali sebelumnya.</p>
+        </details>
+
+        <details>
+          <summary>
+            Kelasnya live atau rekaman?
+            <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+          </summary>
+          <p>Live lewat Zoom, dua sesi per minggu di malam hari, jadi masih muat setelah jam kerja. Semua sesi tetap direkam dan link rekamannya dikirim maksimal sehari setelah kelas — bisa diulang kapan pun tanpa batas waktu.</p>
+        </details>
+
+        <details>
+          <summary>
+            Alat dan bahan apa yang harus saya siapkan?
+            <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+          </summary>
+          <p>Cukup wajan atau panci yang sudah ada di rumah, satu pisau, dan talenan. Tidak ada alat khusus yang harus dibeli. Daftar bahan tiap sesi dikirim dua hari sebelumnya, dan belanjanya dirancang di kisaran Rp30.000 sekali masak.</p>
+        </details>
+
+        <details>
+          <summary>
+            Kalau saya ketinggalan satu sesi bagaimana?
+            <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+          </summary>
+          <p>Tinggal tonton rekamannya, lalu kirim foto hasil masakanmu ke grup untuk dikoreksi seperti biasa. Kalau ketinggalan lebih dari dua sesi, kamu boleh mengulang sesi itu di batch berikutnya tanpa bayar lagi.</p>
+        </details>
+
+        <details>
+          <summary>
+            Cara bayarnya bagaimana?
+            <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+          </summary>
+          <p>Transfer bank atau e-wallet, sekali bayar untuk seluruh kelas. Tidak ada biaya bulanan dan tidak ada tagihan otomatis. Konfirmasi pembayaran dan link Zoom-nya diurus lewat WhatsApp.</p>
+        </details>
+
+        <details>
+          <summary>
+            Kalau ternyata tidak cocok?
+            <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+          </summary>
+          <p>Ikuti dulu sesi pertama. Kalau setelah itu kamu merasa kelasnya tidak cocok, chat Bu Rina dan uangnya dikembalikan penuh — tanpa perlu menjelaskan panjang lebar.</p>
+        </details>
+
+      </div>
+
+      <p class="faq-note">Ada pertanyaan lain? <a href="https://wa.me/6281234567890?text=Halo%20Bu%20Rina%2C%20saya%20mau%20tanya%20soal%20kelas%20masak.">Tanya langsung lewat WhatsApp</a></p>
+    </div>
+  </section>
+
   <!-- ============ CTA PENUTUP ============ -->
   <section class="cta">
     <div class="wrap">
@@ -559,9 +755,10 @@
       </div>
       <div>
         <div class="footer-links">
-          <a href="#keunggulan">Kenapa di sini</a>
+          <a href="#video">Video</a>
           <a href="#kelas">Menu Kelas</a>
           <a href="#testimoni">Cerita Murid</a>
+          <a href="#faq">FAQ</a>
           <a href="https://wa.me/6281234567890?text=Halo%20Bu%20Rina%2C%20saya%20mau%20tanya%20soal%20kelas%20masak.">WhatsApp</a>
           <a href="mailto:halo@dapurrina.id">halo@dapurrina.id</a>
         </div>
